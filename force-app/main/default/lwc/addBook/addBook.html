@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title={formTitle}>
+        <div class="slds-p-around_medium">
+            <lightning-input label="Title" value={title} onchange={handleTitleChange}></lightning-input>
+            <lightning-input label="Author" value={author} onchange={handleAuthorChange}></lightning-input>
+            <lightning-radio-group 
+                label="Status" 
+                options={statusOptions} 
+                value={status} 
+                onchange={handleStatusChange}>
+            </lightning-radio-group>
+            <lightning-button label={saveButtonLabel} variant="brand" onclick={handleSubmit}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
+
+

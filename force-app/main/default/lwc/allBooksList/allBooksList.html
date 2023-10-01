@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Book List">
+        <div class="slds-p-around_medium" style="width: auto;">
+            <template if:true={bookList}>
+                <lightning-datatable
+                    key-field="id"
+                    data={bookList}
+                    columns={columns}
+                    sorted-by={sortBy}
+                    sorted-direction={sortDirection}
+                    onsort={sortHandler}
+                    onrowaction={handleRowAction}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>
